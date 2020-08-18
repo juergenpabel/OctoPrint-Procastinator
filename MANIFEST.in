@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_procastinator/templates *
+recursive-include octoprint_procastinator/translations *
+recursive-include octoprint_procastinator/static *

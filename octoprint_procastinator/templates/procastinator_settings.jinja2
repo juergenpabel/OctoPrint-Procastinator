@@ -1,0 +1,33 @@
+<h3>{{ _('Procastinator  Settings') }}</h3>
+
+<form class="form-horizontal">
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: settings.plugins.procastinator.enabled"> {{ _('Enable') }}
+            </label>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Procastination window') }}</label>
+        <div class="controls">
+            <input type="time" class="input-block-level" data-bind="value: settings.plugins.procastinator.starttime">
+            <div class="help-block">{{ _('Starting time of time window during which print jobs may be delayed') }}</div>
+        </div>
+        <div class="controls">
+            <input type="time" class="input-block-level" data-bind="value: settings.plugins.procastinator.endtime">
+            <div class="help-block">{{ _('Ending time of time window during which print jobs may be delayed') }}</div>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">{{ _('Job options') }}</label>
+        <div class="controls">
+            <div data-bind="foreach: settings.plugins.procastinator.worktimes">
+                <div class="row-fluid" style="margin-bottom: 5px">
+                    <input type="time" data-bind="value: time">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
