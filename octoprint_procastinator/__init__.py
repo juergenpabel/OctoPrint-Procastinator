@@ -4,12 +4,12 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 __license__ = 'GNU Affero General Public License http://www.gnu.org/licenses/agpl.html'
 __copyright__ = "Copyright (C) 2018 The OctoPrint Project - Released under terms of the AGPLv3 License"
 
+from datetime import datetime,time
+
 import octoprint.plugin
 from octoprint.events import Events
 from octoprint.util   import ResettableTimer
 
-from datetime import datetime,time
-import sys
 import flask
 from flask_babel import gettext
 
@@ -117,10 +117,9 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 
 __plugin_name__ = "Procastinator"
-__plugin_description__ = "Allows your printer to procastinate"
+__plugin_description__ = "Allows your printer to procastinate on print jobs"
 __plugin_author__ = "Jürgen Pabel"
 __plugin_license__ = "AGPLv3"
 __plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_implementation__ = ProcastinatorPlugin()
-__plugin_hooks__ = {
-}
+__plugin_hooks__ = {}
