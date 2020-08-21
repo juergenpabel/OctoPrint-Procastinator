@@ -36,6 +36,21 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 		            clientjs=["clientjs/procastinator.js"])
 
 
+	def get_update_information(*args, **kwargs):
+		return dict(
+		    updateplugindemo=dict(
+		        displayName=self._plugin_name,
+		        displayVersion=self._plugin_version,
+		        type="github_release",
+		        current=self._plugin_version,
+		        user="juergenpabel",
+		        repo="OctoPrint-Procastinator",
+
+		        pip="https://github.com/juergenpabel/OctoPrint-Procastinator/archive/{target}.zip"
+		    )
+		)
+
+
 	#~ EventHandlerPlugin
 	def on_event(self, event, payload):
 		if event == Events.PRINT_STARTED:
@@ -122,4 +137,6 @@ __plugin_author__ = "Jürgen Pabel"
 __plugin_license__ = "AGPLv3"
 __plugin_pythoncompat__ = ">=2.7,<4"
 __plugin_implementation__ = ProcastinatorPlugin()
-__plugin_hooks__ = {}
+__plugin_hooks__ = {
+                      "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+                   }
