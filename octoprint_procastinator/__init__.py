@@ -136,7 +136,12 @@ __plugin_description__ = "Allows your printer to procastinate on print jobs"
 __plugin_author__ = "Jürgen Pabel"
 __plugin_license__ = "AGPLv3"
 __plugin_pythoncompat__ = ">=2.7,<4"
-__plugin_implementation__ = ProcastinatorPlugin()
-__plugin_hooks__ = {
-                      "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
-                   }
+
+def __plugin_load__():
+	global __plugin_implementation__
+	__plugin_implementation__ = ProcastinatorPlugin()
+
+	global __plugin_hooks__
+	__plugin_hooks__ = {
+		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+	}
