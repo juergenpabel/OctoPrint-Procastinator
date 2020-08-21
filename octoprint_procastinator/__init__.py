@@ -39,10 +39,10 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 	def get_update_information(*args, **kwargs):
 		return dict(
 		    procastinator=dict(
-		        displayName=self._plugin_name,
-		        displayVersion=self._plugin_version,
+		        displayName=_plugin_name,
+		        displayVersion=_plugin_version,
 		        type="github_release",
-		        current=self._plugin_version,
+		        current=_plugin_version,
 		        user="juergenpabel",
 		        repo="OctoPrint-Procastinator",
 
@@ -108,12 +108,12 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 					delay = (datetime.combine(datetime.now().date(), time.fromisoformat(choice)) - datetime.now()).seconds
 					if delay < 0:
 						delay += 86400
-					self._logger.info(f"Procastinating for {delay} seconds")
+					self._logger.info("Procastinating for {0} seconds".format(delay))
 					self.timer = ResettableTimer(delay, self.on_timedout) #, (self, ))
 					self.timer.start()
 					self._plugin_manager.send_plugin_message(self._identifier, dict(action="notice:show", template="notice:until", parameters=choice))
 				except ValueError:
-					self._logger.error(f"on_api_command() invoked with invalid choice='{choice}'")
+					self._logger.error("on_api_command() invoked with invalid choice='{0}'".format(choice))
 					self._printer.set_job_on_hold(False)
 					self._procastinating = False
 
