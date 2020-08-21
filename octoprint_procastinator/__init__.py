@@ -38,7 +38,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 	def get_update_information(*args, **kwargs):
 		return dict(
-		    updateplugindemo=dict(
+		    procastinator=dict(
 		        displayName=self._plugin_name,
 		        displayVersion=self._plugin_version,
 		        type="github_release",
