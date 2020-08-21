@@ -55,9 +55,9 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 	def on_event(self, event, payload):
 		if event == Events.PRINT_STARTED:
 			if self._settings.get_boolean(["enabled"]):
-				now = datetime.now().time()
-				start = time.fromisoformat(self._settings.get(["starttime"]))
-				end = time.fromisoformat(self._settings.get(["endtime"]))
+				now = datetime.strptime(datetime.now().strftime("%H:%M:%S"), "%H:%M:%S")
+				start = datetime.strptime(self._settings.get(["starttime"])+":00", "%H:%M:%S")
+				end = datetime.strptime(self._settings.get(["endtime"])+":00", "%H:%M:%S")
 				if (start < end and (now >= start and now <= end)) or (start > end and (now > start or now < end)):
 					self._procastinating = True
 					self._printer.set_job_on_hold(True)
@@ -105,7 +105,9 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 				self._printer.set_job_on_hold(False)
 			else:
 				try:
-					delay = (datetime.combine(datetime.now().date(), time.fromisoformat(choice)) - datetime.now()).seconds
+					now = datetime.strptime(datetime.now().strftime("%H:%M:%S"), "%H:%M:%S")
+					work = datetime.strptime(choice+":00", "%H:%M:%S")
+					delay = (work - now).seconds
 					if delay < 0:
 						delay += 86400
 					self._logger.info("Procastinating for {0} seconds".format(delay))
