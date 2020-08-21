@@ -18,8 +18,8 @@ or manually using this URL:
 ## FAQ
 
 - [Are you aware of the spelling error?](#are-you-aware-of-the-spelling-error)
-- [Why didn't you just implement a print job scheduling functionality?](why-didnt-you-just-implement-a-print-job-scheduling-functionality)
-- [Why don't you pause the print job (instead of locking it)?](why-dont-you-pause-the-print-job-instead-of-locking-it)
+- [Why didn't you just implement a print job scheduling functionality?](#why-didnt-you-just-implement-a-print-job-scheduling-functionality)
+- [Why don't you pause the print job (instead of locking it)?](#why-dont-you-pause-the-print-job-instead-of-locking-it)
 
 ### Are you aware of the spelling error?
 
