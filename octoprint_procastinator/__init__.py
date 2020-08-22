@@ -40,13 +40,14 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 		return dict(
 		    procastinator=dict(
 		        displayName=_plugin_name,
-		        displayVersion=_plugin_version,
+		        displayVersion=self._plugin_version,
+
 		        type="github_release",
-		        current=_plugin_version,
 		        user="juergenpabel",
 		        repo="OctoPrint-Procastinator",
+		        current=self._plugin_version,
 
-		        pip="https://github.com/juergenpabel/OctoPrint-Procastinator/archive/{target}.zip"
+		        pip="https://github.com/juergenpabel/OctoPrint-Procastinator/archive/{target_version}.zip"
 		    )
 		)
 
