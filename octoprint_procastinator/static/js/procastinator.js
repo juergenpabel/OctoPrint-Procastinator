@@ -83,7 +83,7 @@ $(function() {
             var opts = {
                 title: gettext("Procastinator"),
                 message: dialog_text,
-                selections: dialog_parameters,
+                selections: dialog_choices,
                 maycancel: true, // see #3171
                 onselect: function(index) {
                     if (index > -1) {
