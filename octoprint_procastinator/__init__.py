@@ -11,7 +11,6 @@ from octoprint.events import Events
 from octoprint.util   import ResettableTimer
 
 import flask
-from flask_babel import gettext
 
 
 class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
@@ -63,7 +62,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 					self._procastinating = True
 					self._printer.set_job_on_hold(True)
 					self._worktimes = list()
-					self._worktimes.append(gettext("NOW"))
+					self._worktimes.append("NOW")
 					for worktime in self._settings.get(["worktimes"]):
 						if worktime['time'] is not None:
 							self._worktimes.append(worktime['time'])
@@ -101,7 +100,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 			self._plugin_manager.send_plugin_message(self._identifier, dict(action="dialog:close"))
 			choice = data["choice"]
-			if choice == gettext("NOW") or choice == "NOW":
+			if choice == "NOW":
 				self._procastinating = False
 				self._printer.set_job_on_hold(False)
 			else:
@@ -130,7 +129,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 	#~ TemplatePlugin
 	def get_template_configs(self):
-		return [dict(type="settings", name=gettext("Procastinator"), custom_bindings=False)]
+		return [dict(type="settings", name="Procastinator", custom_bindings=False)]
 
 
 

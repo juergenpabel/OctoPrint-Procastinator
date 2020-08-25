@@ -77,6 +77,9 @@ $(function() {
 
 
         self.showDialog = function(dialog_text, dialog_parameters) {
+            var dialog_choices = Array.from(dialog_parameters);
+            dialog_choices[0] = gettext("NOW");
+
             var opts = {
                 title: gettext("Procastinator"),
                 message: dialog_text,
