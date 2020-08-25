@@ -101,7 +101,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 			self._plugin_manager.send_plugin_message(self._identifier, dict(action="dialog:close"))
 			choice = data["choice"]
-			if choice == gettext("NOW"):
+			if choice == gettext("NOW") or choice == "NOW":
 				self._procastinating = False
 				self._printer.set_job_on_hold(False)
 			else:
