@@ -36,14 +36,18 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 		            clientjs=["clientjs/procastinator.js"])
 
 
-	def get_update_information(*args, **kwargs):
+	def get_update_information(self):
 		return dict(
 		    procastinator=dict(
 		        displayName=__plugin_name__,
-		        displayVersion=__plugin_version__,
+		        displayVersion=self._plugin_version,
 
-		        type="pypi_release",
-			package="OctoPrint-Procastinator"
+		        type="github_release",
+			user="juergenpabel",
+			repo="OctoPrint-Procastinator",
+			current=self._plugin_version,
+
+			pip="https://github.com/juergenpabel/OctoPrint-Procastinator/archive/{target_version}.zip"
 		    )
 		)
 
@@ -134,7 +138,6 @@ __plugin_name__ = "Procastinator"
 __plugin_description__ = "Allows your printer to procastinate on print jobs"
 __plugin_author__ = "Jürgen Pabel"
 __plugin_license__ = "AGPLv3"
-__plugin_version__ = "0.9.9.9"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 
