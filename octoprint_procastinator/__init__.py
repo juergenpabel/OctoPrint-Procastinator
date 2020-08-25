@@ -63,7 +63,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 					self._procastinating = True
 					self._printer.set_job_on_hold(True)
 					self._worktimes = list()
-					self._worktimes.append("NOW")
+					self._worktimes.append(gettext("NOW"))
 					for worktime in self._settings.get(["worktimes"]):
 						if worktime['time'] is not None:
 							self._worktimes.append(worktime['time'])
@@ -101,7 +101,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 			self._plugin_manager.send_plugin_message(self._identifier, dict(action="dialog:close"))
 			choice = data["choice"]
-			if choice == "NOW":
+			if choice == gettext("NOW"):
 				self._procastinating = False
 				self._printer.set_job_on_hold(False)
 			else:
