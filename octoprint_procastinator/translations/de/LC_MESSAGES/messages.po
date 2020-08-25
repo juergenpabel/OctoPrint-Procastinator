@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OctoPrint-Procastinator 0.9.5\n"
 "Report-Msgid-Bugs-To: i18n@octoprint.org\n"
-"POT-Creation-Date: 2020-08-25 16:25+0200\n"
+"POT-Creation-Date: 2020-08-25 18:54+0200\n"
 "PO-Revision-Date: 2020-08-25 16:25+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -27,7 +27,9 @@ msgstr ""
 
 #: octoprint_procastinator/static/js/procastinator.js:48
 msgid "Please select when start/continue the current print job:"
-msgstr "Bitte den Zeitpunkt zum Starten/Fortsetzen des aktuellen Druckauftrags auswählen:"
+msgstr ""
+"Bitte den Zeitpunkt zum Starten/Fortsetzen des aktuellen Druckauftrags "
+"auswählen:"
 
 #: octoprint_procastinator/static/js/procastinator.js:51
 msgid "Waiting until XX:XX before starting/continuing the current print job."
@@ -38,8 +40,8 @@ msgid "Starting/Continuing the current print job."
 msgstr "Der aktuelle Druckauftrag wurde gestartet/fortgesetzt."
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:1
-msgid "Procastinator  Settings"
-msgstr "Procastinator  Einstellungen"
+msgid "Procastinator Settings"
+msgstr "Procastinator Einstellungen"
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:7
 msgid "Enable"
@@ -51,13 +53,17 @@ msgstr "Zeitfenster"
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:15
 msgid "Starting time of time window during which print jobs may be delayed"
-msgstr "Beginn des Zeitfenstes, in dem gestartete Druckaufträge verzögert werden können."
+msgstr ""
+"Beginn des Zeitfenstes, in dem gestartete Druckaufträge verzögert werden "
+"können."
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:19
 msgid "Ending time of time window during which print jobs may be delayed"
-msgstr "Ende des Zeitfenstes, in dem gestartete Druckaufträge verzögert werden können."
+msgstr ""
+"Ende des Zeitfenstes, in dem gestartete Druckaufträge verzögert werden "
+"können."
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:24
 msgid "Job options"
-msgstr "Startzeiten für zu verzögernde Druckaufträge"
+msgstr "Startzeiten"
 
