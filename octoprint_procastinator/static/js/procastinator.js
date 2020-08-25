@@ -147,6 +147,6 @@ $(function() {
     OCTOPRINT_VIEWMODELS.push({
         construct: ProcastinatorViewModel,
         dependencies: ["settingsViewModel"],
-        elements: ["#settings_dialog"]
+        elements: []
     });
 });
