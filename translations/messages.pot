@@ -7,9 +7,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OctoPrint-Procastinator 0.9.5\n"
+"Project-Id-Version: OctoPrint-Procastinator 0.9.9.9\n"
 "Report-Msgid-Bugs-To: i18n@octoprint.org\n"
-"POT-Creation-Date: 2020-08-25 16:25+0200\n"
+"POT-Creation-Date: 2020-08-25 18:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: octoprint_procastinator/__init__.py:133
+#: build/lib/octoprint_procastinator/__init__.py:133
+#: build/lib/octoprint_procastinator/static/js/procastinator.js:67
+#: build/lib/octoprint_procastinator/static/js/procastinator.js:81
+#: octoprint_procastinator/__init__.py:129
 #: octoprint_procastinator/static/js/procastinator.js:67
 #: octoprint_procastinator/static/js/procastinator.js:81
 msgid "Procastinator"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/static/js/procastinator.js:48
 #: octoprint_procastinator/static/js/procastinator.js:48
 msgid "Please select when start/continue the current print job:"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/static/js/procastinator.js:51
 #: octoprint_procastinator/static/js/procastinator.js:51
 msgid "Waiting until XX:XX before starting/continuing the current print job."
 msgstr ""
 
+#: build/lib/octoprint_procastinator/static/js/procastinator.js:54
 #: octoprint_procastinator/static/js/procastinator.js:54
 msgid "Starting/Continuing the current print job."
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:1
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:1
 msgid "Procastinator  Settings"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:7
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:7
 msgid "Enable"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:12
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:12
 msgid "Procastination window"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:15
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:15
 msgid "Starting time of time window during which print jobs may be delayed"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:19
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:19
 msgid "Ending time of time window during which print jobs may be delayed"
 msgstr ""
 
+#: build/lib/octoprint_procastinator/templates/procastinator_settings.jinja2:24
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:24
 msgid "Job options"
 msgstr ""
