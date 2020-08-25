@@ -133,13 +133,22 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 		return [dict(type="settings", name=gettext("Procastinator"), custom_bindings=False)]
 
 
+def __plugin_load__():
+	global __plugin_name__
+	global __plugin_description__
+	global __plugin_author__
+	global __plugin_license__
+	global __plugin_pythoncompat__
+	global __plugin_implementation__
+	global __plugin_hooks__
 
-__plugin_name__ = "Procastinator"
-__plugin_description__ = "Allows your printer to procastinate on print jobs"
-__plugin_author__ = "Jürgen Pabel"
-__plugin_license__ = "AGPLv3"
-__plugin_pythoncompat__ = ">=2.7,<4"
-__plugin_implementation__ = ProcastinatorPlugin()
-__plugin_hooks__ = {
-                      "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
-                   }
+	__plugin_name__ = "Procastinator"
+	__plugin_description__ = "Allows your printer to procastinate on print jobs"
+	__plugin_author__ = "Jürgen Pabel"
+	__plugin_license__ = "AGPLv3"
+	__plugin_pythoncompat__ = ">=2.7,<4"
+	__plugin_implementation__ = ProcastinatorPlugin()
+	__plugin_hooks__ = {
+                             "octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
+                           }
+
