@@ -59,5 +59,5 @@ msgstr "Ende des Zeitfenstes, in dem gestartete Druckaufträge verzögert werden
 
 #: octoprint_procastinator/templates/procastinator_settings.jinja2:24
 msgid "Job options"
-msgstr "Startzeiten für zu verzögernde Druckaufträge"
+msgstr "Startzeiten"
 
