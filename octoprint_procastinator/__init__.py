@@ -40,12 +40,10 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 		    procastinator=dict(
 		        displayName=__plugin_name__,
 		        displayVersion=self._plugin_version,
-
 		        type="github_release",
 			user="juergenpabel",
 			repo="OctoPrint-Procastinator",
 			current=self._plugin_version,
-
 			pip="https://github.com/juergenpabel/OctoPrint-Procastinator/archive/{target_version}.zip"
 		    )
 		)
@@ -129,12 +127,12 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 	#~ TemplatePlugin
 	def get_template_configs(self):
-		return [dict(type="settings", name="Procastinator", custom_bindings=False)]
+		return [dict(type="settings", name="Procrastinator", custom_bindings=False)]
 
 
 
-__plugin_name__ = "Procastinator"
-__plugin_description__ = "Allows your printer to procastinate on print jobs"
+__plugin_name__ = "Procrastinator"
+__plugin_description__ = "Allows your printer to procrastinate on print jobs"
 __plugin_author__ = "Jürgen Pabel"
 __plugin_license__ = "AGPLv3"
 __plugin_pythoncompat__ = ">=2.7,<4"
