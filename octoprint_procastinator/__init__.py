@@ -31,8 +31,7 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 
 
 	def get_assets(self):
-		return dict(js=["js/procastinator.js"],
-		            clientjs=["clientjs/procastinator.js"])
+		return dict(js=["js/procastinator.js", "clientjs/procastinator.js"])
 
 
 	def get_update_information(self):
