@@ -23,11 +23,13 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 	def __init__(self):
 		self._procastinating = False
 		self._worktimes = list()
+		self._temps = dict()
 
 
 	def initialize(self):
 		self._procastinating = False
 		self._worktimes = list()
+		self._temps = dict()
 
 
 	def get_assets(self):
@@ -61,6 +63,8 @@ class ProcastinatorPlugin(octoprint.plugin.AssetPlugin,
 				if (start < end and (now >= start and now <= end)) or (start > end and (now > start or now < end)):
 					self._procastinating = True
 					self._printer.set_job_on_hold(True)
+					self._temps = self._printer.get_current_temperatures()
+					self._logger.info(self._temps)
 					self._worktimes = list()
 					self._worktimes.append("NOW")
 					for worktime in self._settings.get(["worktimes"]):
